@@ -9,4 +9,4 @@ Hand is set to 12
 Set our angle based on current second
 Increment the angle by 6 degrees indefinitely 
 
-Redraw initial position 
+Redraw initial position  

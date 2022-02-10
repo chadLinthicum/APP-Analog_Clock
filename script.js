@@ -18,7 +18,7 @@ setInterval(function() {
 
 function drawClockFace() {
   ctx.beginPath();
-  ctx.arc(200, 200, 185, 0, 2 * Math.PI);
+  ctx.arc(200, 200, 185, 0, 2 * Math.PI);  
   ctx.stroke(); 
   ctx.fillStyle = '#fcba03';
   ctx.fill();

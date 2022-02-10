@@ -8,35 +8,58 @@ let handsY = 200; //start point of hands
   
 drawClockFace(); 
 
-secondHandStartPos();
+drawSecondsHand();
 
-setInterval(function() {
-  //add function to align hand with source of truth
-  drawClockFace(); 
-  secondHandMovement();
-}, 1000);
+// setInterval(function() {
+//   drawSecondsHand();
+// }, 500);
 
 function drawClockFace() {
   ctx.beginPath();
-  ctx.arc(200, 200, 185, 0, 2 * Math.PI);  
+  ctx.arc(200, 200, 185, 0, 2 * Math.PI);
   ctx.stroke(); 
   ctx.fillStyle = '#fcba03';
   ctx.fill();
 }
 
-function secondHandStartPos() {  
-  ctx.translate(handsX, handsY); //translates canvas to the coordinates
-  ctx.rotate( (Math.PI / 180 * (seconds*6))); //increments hand by 6 degrees
-  ctx.translate(-handsX, -handsY); //translates canvas back to 0, 0
+function drawSecondsHand() {
+  ctx.translate(200,200);
+
+
+  
+
+  if (seconds == 1) {
+    degrees = 6
+    ctx.rotate(Math.PI / 180 * degrees);
+  }  
+
+  if (seconds == 2) {
+    degrees = 12
+    ctx.rotate(Math.PI / 180 * degrees);
+  }  
+
+  ctx.fillStyle = "black";
+  ctx.fillRect(0,0,2,-175);
 }
 
-function secondHandMovement() {
-  let L = -175; //sets the seconds hand to 12 position
-  let W = 2;
-  ctx.translate(handsX, handsY); //translates the canvas to the x & y coordinates
-  ctx.rotate( (Math.PI / 180 * 6));
-  ctx.translate(-handsX, -handsY); //translates center back to 0,0
-  ctx.fillStyle = 'black';
-  ctx.fillRect(handsX, handsY, W, L);
-}
 
+
+
+
+// function secondHandStartPos() {  
+//   ctx.translate(handsX, handsY); 
+//   ctx.rotate( (Math.PI / 180 * (seconds*6))); 
+//   // ctx.translate(-handsX, -handsY);
+// }
+
+// function secondHandMovement() {
+//   let L = -175; //sets the seconds hand to 12 position
+//   let W = 2;
+//   // ctx.translate(handsX, handsY); 
+//   ctx.rotate( (Math.PI / 180 * 6));
+//   // ctx.translate(-handsX, -handsY); 
+//   ctx.fillStyle = 'black';
+//   ctx.fillRect(handsX, handsY, W, L);
+//   let seconds = (new Date()).getSeconds();
+//   console.log("seconds = " + seconds);
+// }

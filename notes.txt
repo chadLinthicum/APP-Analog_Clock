@@ -1,0 +1,12 @@
+if seconds is 5
+angle = 30
+
+if second is 6
+angle = 36
+
+Initialize program:
+Hand is set to 12
+Set our angle based on current second
+Increment the angle by 6 degrees indefinitely 
+
+Redraw initial position 

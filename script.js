@@ -2,15 +2,18 @@ canvas = document.getElementById("canvas");
 ctx = canvas.getContext('2d');
 
 setInterval(function() {
-  clockFace(); 
+  clockFace(185, '#FFB233'); 
+  hoursHand();
+  minutesHand();
   secondsHand();
+  clockFace(15, 'black'); 
 }), 500;
 
-function clockFace() {
+function clockFace(radius, color) {
   ctx.beginPath();
-  ctx.arc(200, 200, 185, 0, 2 * Math.PI);
+  ctx.arc(200, 200, radius, 0, 2 * Math.PI);
   ctx.stroke(); 
-  ctx.fillStyle = '#fcba03';
+  ctx.fillStyle = color;
   ctx.fill();
 }
 
@@ -20,6 +23,31 @@ function secondsHand() {
   degrees = seconds * 6;
   ctx.rotate(Math.PI / 180 * degrees);
   ctx.fillStyle = "black";
-  ctx.fillRect(0,0,2,-175);
+  fillRectCentered(0,0,2,-175);
   ctx.resetTransform();  
+}
+
+function minutesHand() {
+  const minutes = new Date().getMinutes();
+  ctx.translate(200,200);
+  degrees = minutes * 6;
+  ctx.rotate(Math.PI / 180 * degrees);
+  ctx.fillStyle = "black";
+  fillRectCentered(0, 0, 10, -175);
+  ctx.resetTransform();  
+}
+
+function hoursHand() {
+  const hours = new Date().getHours();
+  ctx.translate(200,200);
+  degrees = hours * 30;
+  ctx.rotate(Math.PI / 180 * degrees);
+  ctx.fillStyle = "black";
+  fillRectCentered(0,0,15,-125);
+  ctx.resetTransform();  
+}
+
+//centers the hand instead of drawing from top-left
+function fillRectCentered(x, y, width, height) {
+  ctx.fillRect(x - width / 2, y, width, height);
 }

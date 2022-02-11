@@ -2,16 +2,17 @@ canvas = document.getElementById("canvas");
 ctx = canvas.getContext('2d');
 
 setInterval(function() {
-  clockFace(185, '#FFB233'); 
+  clockFace(185, '#D85151'); 
   hoursHand();
   minutesHand();
   secondsHand();
-  clockFace(15, 'black'); 
+  clockFace(13, 'black'); 
 }), 500;
 
 function clockFace(radius, color) {
   ctx.beginPath();
   ctx.arc(200, 200, radius, 0, 2 * Math.PI);
+  ctx.lineWidth=7;
   ctx.stroke(); 
   ctx.fillStyle = color;
   ctx.fill();

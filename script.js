@@ -40,21 +40,24 @@ function minutesHand() {
   ctx.fillStyle = "black";
   fillRectCentered(0, 0, 10, -145);
   ctx.resetTransform();  
+  return minutes;
 }
 
 function hoursHand() {
   const hours = new Date().getHours();
+  const minutes = new Date().getMinutes();
   ctx.translate(canvas.width/2,canvas.height/2);
-  
-
-  degrees = hours * 30;
+  if (minutes < 15) degrees = hours * 30;
+  if (minutes >= 15 && minutes < 30) degrees = (hours * 30) + 7.5;
+  if (minutes >= 30 && minutes < 45) degrees = (hours * 30) + 15;
+  if (minutes >= 45 && minutes <= 60) degrees = (hours * 30) + 22.5;
   ctx.rotate(Math.PI / 180 * degrees);
   ctx.fillStyle = "black";
   fillRectCentered(0,0,15,-100);
   ctx.resetTransform();  
 }
 
-//centers the hand instead of drawing from top-left
+//draws rect from left-center instead of top-left
 function fillRectCentered(x, y, width, height) {
   ctx.fillRect(x - width / 2, y, width, height);
 }

@@ -9,8 +9,7 @@ setInterval(function() {
   hoursHand();
   minutesHand();
   secondsHand();
-  clockFace(13, 'black');
-   
+  clockFace(9, '#000');
 }), 500;
 
 function clockFace(radius, color) {
@@ -27,8 +26,8 @@ function secondsHand() {
   ctx.translate(canvas.width/2,canvas.height/2);
   degrees = seconds * 6;
   ctx.rotate(Math.PI / 180 * degrees);
-  ctx.fillStyle = "black";
-  fillRectCentered(0,0,2,-175);
+  ctx.fillStyle = "#000";
+  fillRectCentered(0,0,2,-150);
   ctx.resetTransform();  
 }
 
@@ -37,8 +36,8 @@ function minutesHand() {
   ctx.translate(canvas.width/2,canvas.height/2);
   degrees = minutes * 6;
   ctx.rotate(Math.PI / 180 * degrees);
-  ctx.fillStyle = "black";
-  fillRectCentered(0, 0, 10, -145);
+  ctx.fillStyle = "#000";
+  fillRectCentered(0, 0, 7, -100);
   ctx.resetTransform();  
   return minutes;
 }
@@ -47,13 +46,13 @@ function hoursHand() {
   const hours = new Date().getHours();
   const minutes = new Date().getMinutes();
   ctx.translate(canvas.width/2,canvas.height/2);
-  if (minutes < 15) degrees = hours * 30;
-  if (minutes >= 15 && minutes < 30) degrees = (hours * 30) + 7.5;
-  if (minutes >= 30 && minutes < 45) degrees = (hours * 30) + 15;
-  if (minutes >= 45 && minutes <= 60) degrees = (hours * 30) + 22.5;
+  degrees = hours * 30;
+  if (minutes >= 15 && minutes < 30) degrees += 7.5;
+  if (minutes >= 30 && minutes < 45) degrees += 15;
+  if (minutes >= 45 && minutes <= 59) degrees += 22.5;
   ctx.rotate(Math.PI / 180 * degrees);
-  ctx.fillStyle = "black";
-  fillRectCentered(0,0,15,-100);
+  ctx.fillStyle = "#000";
+  fillRectCentered(0,0,12,-75);
   ctx.resetTransform();  
 }
 

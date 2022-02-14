@@ -9,7 +9,7 @@ setInterval(function() {
   hoursHand();
   minutesHand();
   secondsHand();
-  clockFace(9, '#000');
+  clockFace(7, '#000');
 }), 500;
 
 function clockFace(radius, color) {
@@ -27,7 +27,7 @@ function secondsHand() {
   degrees = seconds * 6;
   ctx.rotate(Math.PI / 180 * degrees);
   ctx.fillStyle = "#000";
-  fillRectCentered(0,0,2,-150);
+  fillRectCentered(0,0,2,-canvas.height*0.42);
   ctx.resetTransform();  
 }
 
@@ -37,7 +37,7 @@ function minutesHand() {
   degrees = minutes * 6;
   ctx.rotate(Math.PI / 180 * degrees);
   ctx.fillStyle = "#000";
-  fillRectCentered(0, 0, 7, -100);
+  fillRectCentered(0, 0, 7, -canvas.height*0.42);
   ctx.resetTransform();  
   return minutes;
 }
@@ -52,7 +52,7 @@ function hoursHand() {
   if (minutes >= 45 && minutes <= 59) degrees += 22.5;
   ctx.rotate(Math.PI / 180 * degrees);
   ctx.fillStyle = "#000";
-  fillRectCentered(0,0,12,-75);
+  fillRectCentered(0,0,10,-canvas.height*0.29);
   ctx.resetTransform();  
 }
 

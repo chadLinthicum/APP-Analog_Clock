@@ -1,7 +1,7 @@
 <p align="center">
- <b>Description:</b> Take some time to chill out with some moon shine over the abyss...<br>
+ <img src="https://user-images.githubusercontent.com/10480470/154360749-6a310964-90dd-4510-8b71-76d9330eaee3.gif" width="300"><br>
  <br>
- <img src="https://user-images.githubusercontent.com/10480470/154318686-7bb43e62-0b34-47bb-aa40-375b293e3996.PNG" width="300"><br>
+ <b>Description:</b> Take some time to chill out with some moon shine over the abyss...<br>
  <br>
  <b>Check it out in your browser: </b><a href="https://chadlinthicum.github.io/APP_Analog-Lunar-Clock/"> Here</a><br>
  <br>

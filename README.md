@@ -9,7 +9,7 @@
  <br>
  <b>Installation:</b> Download the repository and<br> open the index.html file.<br>
  <br>
- <b>Logistics:</b> This app utilizes the canvas element. Each hand's rotatation is calculated based on the Date objects<br> which are created with the new Date() constructor. The hands are then tilted to specified degree each frame accordingly.<br>
+ <b>Logistics:</b> This app utilizes the canvas element. Each hand's rotatation is calculated based on the Date objects<br> which are created with the new Date() constructor. The hands are then tilted to a specified degree each frame accordingly.<br>
  <br>
  <b>Author:</b> Chad Linthicum<br>
  <a href="https://www.linkedin.com/in/chad-a-linthicum/">Linked-In<a>

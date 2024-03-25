@@ -3,7 +3,7 @@
  <br>
  <b>Description:</b> Take some time to chill out with some moon shine over the abyss...<br>
  <br>
- <b>Check it out in your browser: </b><a href="https://chadlinthicum.github.io/APP_Analog-Lunar-Clock/"> Here</a><br>
+ <b>Check it out in your browser: </b><a href="https://chadlinthicum.github.io/APP-Analog_Lunar_Clock/"> Here</a><br>
  <br>
  <b>Download: </b><a href="https://github.com/chadLinthicum/APP_Analog-Lunar-Clock/archive/refs/heads/main.zip">Here</a><br>
  <br>
